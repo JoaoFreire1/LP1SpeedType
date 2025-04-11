@@ -58,15 +58,18 @@ namespace SpeedType
         public string GetRandomSentence()
         {
             string result = sentences[random.Next(sentences.Length)];
-            string newResult = "";
-            for (int i = 0; i < result.Length; i++)
-            {
-                if (i > 0 && char.IsUpper(result[i]))
-                    newResult += " ";
-                newResult += result[i];
-            }
-            return newResult;
+            return result.Humanize();
+            ///string result = sentences[random.Next(sentences.Length)];
+            //string newResult = "";
+            //for (int i = 0; i < result.Length; i++)
+            //{
+                //if (i > 0 && char.IsUpper(result[i]))
+                    //newResult += " ";
+                //newResult += result[i];
+            //}
+            //return newResult;
         }
+            // ////////// => TO IMPLEMENT <= //////////// //
         
     }
 }
