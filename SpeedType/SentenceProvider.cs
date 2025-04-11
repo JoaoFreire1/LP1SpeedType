@@ -1,6 +1,7 @@
 using System;
 using System.IO;
 using System.Linq;
+using System.Threading.Channels;
 using Humanizer;
 
 namespace SpeedType
@@ -56,7 +57,14 @@ namespace SpeedType
         /// </returns>
         public string GetRandomSentence()
         {
-            return sentences[random.Next(sentences.Length)];
+            string result = sentences[random.Next(sentences.Length)];
+            for (int i = 0; i < result.Length; i++)
+            {
+                if (i > 0 && char.IsUpper(result[i]))
+                    result += " ";
+                result += result[i];
+            }
+            return result;
             // ////////// => TO IMPLEMENT <= //////////// //
         }
     }
