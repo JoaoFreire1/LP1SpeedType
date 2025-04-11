@@ -37,7 +37,8 @@ namespace SpeedType
 
             if (File.Exists(filePath))
             {
-                sentences = // ////////// => TO IMPLEMENT <= //////////// //
+                sentences = File.ReadAllLines(filePath);
+                // ////////// => TO IMPLEMENT <= //////////// //
             }
             else
             {
@@ -55,6 +56,7 @@ namespace SpeedType
         /// </returns>
         public string GetRandomSentence()
         {
+            return sentences[random.Next(sentences.Length)];
             // ////////// => TO IMPLEMENT <= //////////// //
         }
     }
