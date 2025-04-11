@@ -168,7 +168,7 @@ namespace SpeedType
 
                 // Add row to table
                 // Table.AddRow() only accepts 
-                table.AddRow((i + 1), gameStats[i].WPM, gameStats[i].Accuracy, gameStats[i].TimeTaken);
+                table.AddRow((i + 1).ToString(), gameStats[i].WPM.ToString(), gameStats[i].Accuracy.ToString(), gameStats[i].TimeTaken.ToString("F2"));
                 // ////////// => TO IMPLEMENT <= //////////// //
             }
 
