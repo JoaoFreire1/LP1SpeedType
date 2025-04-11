@@ -88,7 +88,8 @@ namespace SpeedType
         private void StartGame()
         {
             // The sentence that will be presented to the player.
-            string sentence = "";// ////////// => TO IMPLEMENT <= //////////// //
+            string sentence = sentenceProvider.GetRandomSentence();
+            // ////////// => TO IMPLEMENT <= //////////// //
 
             AnsiConsole.Clear();
             AnsiConsole.MarkupLine("[bold green]Type This Sentence:[/]");
@@ -107,20 +108,24 @@ namespace SpeedType
 
             // The words per minute (WPM) calculated based on the time taken 
             // and the user input.
-            double wpm = // ////////// => TO IMPLEMENT <= //////////// //
+            double wpm = evaluator.CalculateWPM(userInput, timeTaken);
+            // ////////// => TO IMPLEMENT <= //////////// //
 
             // The accuracy percentage calculated based on the user's input and
             // the original sentence.
-            int accuracy = // ////////// => TO IMPLEMENT <= //////////// //
+            int accuracy = evaluator.CalculateAccuracy(userInput, sentence);
+            // ////////// => TO IMPLEMENT <= //////////// //
 
             // Shift existing entries
             for (int i = gameStats.Length - 1; i > 0; i--)
             {
+                gameStats[i] = gameStats[i - 1];
                 // ////////// => TO IMPLEMENT <= //////////// //
             }
 
             // Add new result at the beginning
-            gameStats[0] = // ////////// => TO IMPLEMENT <= //////////// //
+            gameStats[0] = new GameResult(wpm, accuracy, timeTaken);
+            // ////////// => TO IMPLEMENT <= //////////// //
 
             AnsiConsole.MarkupLine("\n[bold yellow]Results:[/]");
             AnsiConsole.MarkupLine($"[bold]Time Taken:[/] {timeTaken:F2} " +
