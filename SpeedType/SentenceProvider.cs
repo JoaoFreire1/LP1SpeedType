@@ -66,6 +66,7 @@ namespace SpeedType
             }
             return result;
             // ////////// => TO IMPLEMENT <= //////////// //
+            ///return sentences[random.Next(sentences.Length)];
         }
     }
 }
