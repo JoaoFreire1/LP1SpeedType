@@ -162,11 +162,13 @@ namespace SpeedType
             {
                 if (gameStats[i] == null)
                 {
+                    break;
                     // ////////// => TO IMPLEMENT <= //////////// //
                 }
 
                 // Add row to table
-                // Table.AddRow() only accepts strings
+                // Table.AddRow() only accepts 
+                table.AddRow((i + 1), gameStats[i].WPM, gameStats[i].Accuracy, gameStats[i].TimeTaken);
                 // ////////// => TO IMPLEMENT <= //////////// //
             }
 
