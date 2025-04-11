@@ -85,7 +85,7 @@ namespace SpeedType
         private void StartGame()
         {
             // The sentence that will be presented to the player.
-            string sentence = // ////////// => TO IMPLEMENT <= //////////// //
+            string sentence = "";// ////////// => TO IMPLEMENT <= //////////// //
 
             AnsiConsole.Clear();
             AnsiConsole.MarkupLine("[bold green]Type This Sentence:[/]");

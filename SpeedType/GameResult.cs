@@ -46,6 +46,9 @@ namespace SpeedType
         public GameResult(double wpm, int accuracy, double timeTaken)
         {
             // ////////// => TO IMPLEMENT <= //////////// //
+            this.WPM = wpm;
+            this.Accuracy = accuracy;
+            this.TimeTaken = timeTaken;
         }
     }
 }
