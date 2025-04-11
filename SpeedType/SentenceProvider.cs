@@ -26,7 +26,7 @@ namespace SpeedType
         /// </remarks>
         public SentenceProvider()
         {
-            random = // ////////// => TO IMPLEMENT <= //////////// //
+            random = new Random();// ////////// => TO IMPLEMENT <= //////////// //
             
             string directoryPath = Path.GetFullPath(
                 Path.Combine(
